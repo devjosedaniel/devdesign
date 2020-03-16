@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { PortafolioComponent } from './pages/portafolio/portafolio.component';
 import { NosotrosComponent } from './pages/nosotros/nosotros.component';
 import { ItemComponent } from './pages/item/item.component';
+import { BusquedaComponent } from './pages/busqueda/busqueda.component';
 
 
 const routes: Routes = [
@@ -19,8 +20,12 @@ const routes: Routes = [
     component: PortafolioComponent
   },
   {
-    path: 'item',
+    path: 'item/:id',
     component: ItemComponent
+  },
+  {
+    path: 'busqueda/:palabra',
+    component: BusquedaComponent
   },
   {
     path: '**',
